@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css">
+    <style type="text/css">
+    /* side bar */
+
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .slider {
+        width: 50%;
+        margin: 100px auto;
+    }
+
+    .slick-slide {
+      margin: 0px 10px;
+    }
+
+    .slick-slide img {
+      width: 100%;
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+      color: black;
+    }
+
+    .slick-slide {
+      transition: all ease-in-out .3s;
+      opacity: .2;
+    }
+    
+    .slick-active {
+      opacity: .5;
+    }
+
+    .slick-current {
+      opacity: 1;
+    }
+
+    .test{
+      display: flex;
+      justify-content: center;
+    }
+    .item{
+      width:300px;
+      height: 300px;
+      overflow: hidden;
+    }
+    .item .img{
+      width: 100%;
+      height: 100%;
+    }
+
+    .item:hover{
+      animation: ss .2s linear ;
+    }
+    @keyframes ss{
+      0%{width: 100%;
+        height: 100%; }
+      100%{ width: 150%;
+            height: 150%; }
+    }
+   
+    
+    
+    
+    </style>
+</head>
+<body>
+
+    <section class="regular slider">
+        <div>
+          <img src="https://picsum.photos/400/400/?blur=2">
+        </div>
+        <div>
+          <img src="https://picsum.photos/400/400/?blur=2">
+        </div>
+        <div>
+          <img src="https://picsum.photos/400/400/?blur=2">
+        </div>
+        <div>
+          <img src="https://picsum.photos/400/400/?blur=2">
+        </div>
+        <div>
+          <img src="https://picsum.photos/400/400/?blur=2">
+        </div>
+        <div>
+          <img src="https://picsum.photos/400/400/?blur=2">
+        </div>
+      </section>
+
+      <div class="test">
+        <div class="item">
+          <img src="https://picsum.photos/400/400/?blur=2" alt="">
+        </div>
+        <div class="item">
+          <img src="https://picsum.photos/400/400/?blur=2" alt="">
+        </div>
+      </div>
+
+
+
+<!-- js -->
+<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+<script src="./slick/slick.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+    $(".regular").slick({
+        dots: true,
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 3
+      });
+</script>
+    
+</body>
+</html>
